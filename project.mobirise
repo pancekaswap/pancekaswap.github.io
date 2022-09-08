@@ -1,0 +1,157 @@
+{
+  "settings": {
+    "name": "pancekaswap",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise5",
+      "title": "Mobirise 5",
+      "styling": {
+        "primaryColor": "#6592e6",
+        "secondaryColor": "#ff6666",
+        "successColor": "#40b0bf",
+        "infoColor": "#47b5ed",
+        "warningColor": "#FFE161",
+        "dangerColor": "#ff9966",
+        "mainFont": "Jost",
+        "display1Font": "Jost",
+        "display1Size": 4.6,
+        "display2Font": "Jost",
+        "display2Size": 3,
+        "display5Font": "Jost",
+        "display5Size": 2,
+        "display7Font": "Jost",
+        "display7Size": 1.2,
+        "display4Font": "Jost",
+        "display4Size": 1.1,
+        "isRoundedButtons": false,
+        "isGhostButtonBorder": false,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.6.11",
+    "siteFonts": [
+      {
+        "css": "'Jost', sans-serif",
+        "name": "Jost",
+        "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "favicon": "@PROJECT_PATH@/assets/images/pancakeswap.png",
+    "mbrsiteDomain": "5k4k4rvelq",
+    "imageResize": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.6.11"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "PancakeSwap | Exchange | Official Site",
+        "meta_descr": "Discover PancakeSwap, the leading DEX on BNB Smart Chain (BSC) with the best farms in DeFi and a lottery for CAKE.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".image-wrapper": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            },
+            "img": {
+              "width": "100%"
+            }
+          },
+          "_name": "image3",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image3\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/pancakeswap-finance.png\" alt=\"Pancakeswap\">\n                    <p class=\"mbr-description mbr-fonts-style mt-2 align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n                        Image Description</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tgOZ0wGgTa",
+          "_anchor": "image3-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_name": "header2",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header2\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n\n        <input type=\"range\" inline name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\">\n        <select title=\"Align\" name=\"contentAlign\">\n            <option value selected>Left</option>\n            <option value=\"justify-content-center\">Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background7.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row {{contentAlign}}\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><b>Pancakeswap Exchange</b></h1>\n                <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">Header Subtitle</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">We will have the next IFO with WOMBAT on August 30th. We held an AMA (Ask Me Anything) with Alex from the Wombat team to get to know the project more! If you missed participating in the AMA, read this article and learn about their project. This time, a Stableswap platform!<br><br>Opening Words From Wombat\n<br>Hi everyone! I am Alex, founder of Wombat, was previously a quant trader for a few years before I left and became a software engineer and then a blockchain engineer. DeFi is just the coolest thing ever and I’m glad I got to start this project. DeFi changed my life and I hope this project can make do the same for everyone who uses it as well.\n<br>\n<br>Our team as always into crypto and DeFi. Daniel, our CTO was an ETH ICO investor and a great software engineer and has been a blockchain engineer for many years now. Raymond, our CMO, runs his own marketing firm that focuses on crypto, so the teaching and marketing side is in super good hands, and we all love crypto and want to see it grow. Wombat started in the Binance Incubation Labs Season 3, out of 1000 of applications, Wombat was chosen as a project that represented something that can help shape the future along with the 8 other great projects. After that, we were entered into Binance’s MVB4 — Most Valuable Builder Season 4.\n<br>\n<br>Finally, we not only joined BNB Chain DeFi League, a coalition representing the top projects on the BNB Chain, but we were also selected as June 2022 Project Star on BNB Chain. To say the least, we have had a great reception from BNB Chain and Binance. In short, Wombat is a stableswap (popular stableswaps are Curve, Ellipsis), however, Wombat’s algorithm and design is vastly different than the aforementioned protocols and that’s what makes Wombat unique — Wombat is brand new tech and design that is unique to BNB Chain and the entirety of crypto. As a DeFi primitive, Wombat strives to help be the foundation for DeFi to grow strong on the next wave in progress for BNB Chain. My vision is for Wombat to be Curve, and Pancakeswap to be Uniswap, but for the BNB Chain space. When both projects succeed, it will ultimately create a multiplier effect that will lift the entire blockchain together.\n<br>\n<br>Let’s begin with the Questions!\n<br>[Q1] Can you explain what’s the unique difference between your project and the competitors (like other stableswap protocols)?\n<br>\n<br>Wombat Exchange is the next generation multi-chain stableswap native to BNB Chain. Its pioneering stableswap 2.0 model allows users to swap stablecoins with the best exchange rates and minimal slippage, and stake just one currency to earn a remunerative and sustainable yield.\n<br>\n<br>We solve scaling and liquidity issues and provide the end users with an easy-to-use UI. Stableswap math can be complicated, but users shouldn’t be having a difficult time using it. Wombat effectively solves all of the issues and more! As mentioned previously, Wombat’s uniqueness is the design and special algorithm that exists only in Wombat and BNB chain. On top of that, we have made revolutionary designs in order to make things not only safe for users, but have mechanisms in which we protect users assets when situations like UST collapse occurs.\n<br>\n<br>We have also simplified the deposit/withdrawal/swap procedure, so everyone and anyone can use it and understand it easily. With a more intuitive staking procedure, users can easily understand and become liquidity providers to easily earn yield. This is important because, for DeFi to grow strong, you need things that the masses can easily use, and this is one of the best things Wombat can fix and solve. Back in DeFi 1.0, we all remembered when it was easy to use, click a few buttons and stake. It was easy, and that’s what we need to go back to. When we look at current stableswaps, they are all convoluted and hard to understand, and even the most seasoned crypto investors have a hard time understanding how they work. We at Wombat believe that’s not how it should be, and Wombat is the solution for the masses.\n<br>\n<br>Something worth mentioning as well is that Wombat has a strong portfolio of leading backers including Animoca Brands, Binance Labs, Shima Capital, and Jump Crypto, just to name a few. We require all investors to lock in for much longer time frames than most other projects on the DeFi ecosystem, and they are all known to be diamond hands and supportive of projects in general. We believe these partnerships strengthen our credibility and passion for building the next generation stableswap!\n<br>\n<br>[Q2] Could you give some more information about the Asset Liability management concept? How should the Coverage ratio written on the pools be interpreted?\n<br>\n<br>So the ideal originally came from traditional finance. Where it measures the health and sanctity of a company. In our opinion, this is the best way to manage equilibrium because we should really treat tokens as a company — that is, we measure based on how much of it is in the system in relation to how much of it is deposited. You might ask, if this is so good, then why haven’t people implemented it early on? Well, the asset-liability management model used by Wombat may expose funds to withdrawal arbitrage, which drains funds from the pool. Our solution completely mitigates this as we developed a withdrawal fee to prevent withdrawal arbitrage and incentivize users to deposit and keep the system at an equilibrium state. The math was hard but we managed to solve it!\n<br>\n<br>We’re the first protocol to bring the Equilibrium Coverage Ratio concept to maintain overall system health and, ultimately, protect its users’ funds. With this method, Wombat can spot risks and manage them before tragedies strike. You can think of maintaining a global equilibrium as a way to maximize efficiency and speed up calculations. This is a reason why Wombat has maintained stability even through turbulent times and proof that the math behind Wombat is strong and resilient to market conditions. Good DeFi protocols are business as usual in all types of market conditions.\n<br>\n<br>Our adoption of the all-in-one closed-form quadratic solution allows us to be highly efficient and scalable, and a few of its user-oriented perks are providing exact calculations, achieving lower gas fees, and managing liquidity more effectively.\n<br>\n<br>One of the powerful aspects of Wombat’s design is that we are very conducive to protocols such as yield aggregators, trading platforms borrowing, and lending protocols to build upon. Building an incubation lab is a part of our roadmap where we can support future projects and create synergies with these projects to maximize efficiencies. Our goal is to build our own ecosystem, where these partnerships will benefit Wombat’s governance token holders, by providing value to its users. With a strong Wombat ecosystem, bringing strength to the BNB Chain, everyone benefits, especially Pancakeswap!\n<br>\n<br>[Q3]Stableswaps with minimum slippage and Staking with maximum returns. What can you tell us about the security of the protocol?\n<br>\n<br>We believe that security is undoubtedly one of the main concerns for any DeFi users, and there is no doubt we are on the same page. As a DeFi protocol, it’s way more than just the code, but we also have to think of the bigger picture, the assets our users let trade.\n<br>\n<br>In terms of smart contracts and codes, we have passed the audits successfully from numerous reputable security audit firms, including Zokyo, Peckshield and Hacken, to ensure our code is secure from bugs and hacks. All recommendations and suggestions have been deployed to further improve the security of Wombat. More details can be found in our medium article: https://medium.com/wombat-exchange/security-audit-completed-see-wombats-audit-results-from-peckshield-hacken-and-zokyo-d10cbaa1ea30\n<br>\n<br>In the meanwhile, we are also partnering with Immunefi, the leading Web3 bug bounty platform, for the bug bounty program for the mass public to review and spot vulnerabilities, with the primary goal to keep the platform safe and protect our users at all costs.\n<br>\n<br>Another aspect that Wombat does differently is how we manage our sidepools and how we have mechanisms to prevent the pools being drained if the token depegs. This is vastly different than how every other protocols handle algo-stablecoins. This is turn, will bring stability and trust back into the stablecoin market, which is the backbone for the entire crypto ecosystem.\n<br>\n<br>[Q4] Why stablecoins? On an exchange if you add all other tokens you can earn more via fees. So why did you decide to add only stablecoins?\n<br>\n<br>Wombat’s bread and butter is our innovative algorithm that provides the lowest slippage for pegged assets. Unlike awesome projects like PancakeSwap that can list almost any other tokens, Wombat’s algorithm only supports pegged assets — and we do it extremely well. There is no other algorithm out there that is more capital efficient and results in a simple user interface as Wombat does and this is Wombat’s strength.\n<br>\n<br>Wombat’s goal is to be the best stableswap because stablecoins, although they are boring, they have immense use throughout the entire crypto ecosystem. Bridging technology is basically meant and built for stablecoins. There’s really no value in bridging BNB to Ethereum, or SOL to BNB Chain. However, there is massive value in bridging stablecoins over where you can spend and buy things there on different blockchain platforms. This is actually all in line with the Wombat ethos — DeFi is for everyone and that’s what we are trying to make a reality. Wombat is built to be a multichain protocol that makes DeFi accessible to everyone, anywhere. In short, Wombat just wants to do one thing extremely well, and being a platform for all pegged assets — everywhere.\n<br>\n<br>Live Q&amp;A\n<br>Users without @userID won’t be mentioned. If you asked a question and you did not have a user at the time of editing this article, please contact us for us to update it.\n<br>\n<br>[Q1 User: @alexywh126] I am interested in de-peg protection. How does it work exactly? How does wombat exchange comes into play to help stablecoins using the platform maintaining the peg?\n<br>\n<br>So one of the things when a token depegs for example is in a pair like BUSD-UST — when UST goes to 0, the pool of BUSD gets swapped out, and basically any LP in that pool is left with a bunch of useless tokens. so because of this whole UST ordeal, people have began to not trust algo-stable coins. but stablecoins are important, and we should not shy away.\n<br>\n<br>However! we need to do our best to protect our users and this is where we use an oracle-less solution, that is fast and efficient to protect users assets. When the coverage ratio is at a dangerous rate, the mechanism will penalize malicious players from draining the pool and making the pool safe for all liquidity providers\n<br>\n<br>[Q2 User:@Moonboy_jack9] Why did you choose to launch through #Pancakeswap and is it good time to launch cause market is not stable currently ?\n<br>\n<br>Great question, PancakeSwap is the best dex on bnb chain and there is no second best. wombat’s goal is to be the curve to pancakeswap’s uniswap, and thus it is only the best choice to be wombat’s first launch partner. There have been many exchanges that have reached out to us to list on cex’s but, in order to keep the defi ethos, we chose to go with pancakeswap.\n<br>\n<br>Plus: Pancakeswap team are a bunch of studs and i love them.\n<br>\n<br>Regarding if it’s a good time to launch — we’re here for the long term, and we are here to build. if you looked at a lot of great projects such as avalanche, curve, uniswap — they all launched during the bear market and look at them now! it doesn’t matter when good defi primitives launch because we are not a short term project, we are riding the waves with everyone here — bear or bull does not stop the wombat.\n<br>\n<br>[Q3 User:@funksusie] Binance smart Chain blockchain is having high transaction speed and cheap gas fees, Are you planning to launch your mainet or switch to other blockchains in the future?\n<br>\n<br>Nope. We, like Pancakeswap are bnb chain native, and we plan to keep it that way. Even when we go multi-chain, we will still keep bnb chain as our base and foundation. That is our commitment to bnb chain, and i am focused to build a strong defi foundation on bnb chain!\n<br>\n<br>[Q4 User:@Satoshi_2010] How easy to Integrate any App On WOMBAT?\n<br>How can Developers start Building On This Platform?\n<br>\n<br>Super easy. if you want to start, just come into our tg chat, tell us about what you want to build and how you will integrate $wom and $vewom, and if you pass, we will help you get started!\n<br>\n<br>Wombat Quiz!!\n<br>The Wombat team prepared a few questions in a form, this form was shared and it remained open for 5 minutes. Users had to fill their public wallet address (not their private keys), Answers and Telegram/Discord username. Those who answered all questions correctly entered into a lucky draw done by Wombat to determine 20 winners.\n<br>\n<br>If you want to participate in this kind of events, follow up in our social channels to find out when the next AMA will be!\n<br>\n<br>Final Words from Wombat\n<br>Alex: I would like to say a big thank you to the Pancakeswap team, you guys are super awesome and looking forward for more collaborations in the future! Defi is for everyone!\n<br>\n<br>That’s all from AMA! It was a very informative Q &amp; A session.\n<br>\n<br>Don’t forget that we will have the IFO on 30th August, MARK THE DATE📅\n<br>\n<br>To catch up with Wombat news, don’t forget to follow their social channels!<br></p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\">\n                    <a class=\"btn btn-success\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Free Download!</a>\n                    <a class=\"btn btn-success-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Live Demos &gt;</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "tgOZ3ri79Y",
+          "_anchor": "header2-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
